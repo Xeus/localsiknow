@@ -1,0 +1,39 @@
+<head>
+    <title>Locals I Know</title>
+    <style>
+        .locals {display: table;}
+        .local-row {display: table-row;}
+        .local-cell {display: table-cell;}
+    </style>
+</head>
+
+<body>
+
+    {{> addLocal}}
+
+    {{> showLocals}}
+
+</body>
+
+<template name="showLocals">
+  <div class="locals">
+      {{#each locals}}
+        <div class="local-row" id="{{_id}}">
+            <div id="{{name}}" class="local-name local-cell">{{name}}</div>
+            <div id="{{neighborhood}}" class="local-neighborhood local-cell">{{neighborhood}}</div>
+            <div id="{{city}}" class="local-city local-cell">{{city}}</div>
+            <div id="{{circumstance}}" class="local-circumstance local-cell">{{circumstance}}</div>
+            <div class="local-cell"><a href="#" class="delete delete_{{_id}}">delete</a></div>
+        </div>
+      {{/each}}
+  </div>
+</template>
+
+<template name="addLocal">
+  <h1>Add a Local</h1>
+  <div>name: <input type="text" class="add-local-name" id="local_name" name="local_name" /></div>
+  <div>neighborhood: <input type="text" class="add-local-neighborhood" name="local_neighborhood" id="local_neighborhood" /></div>
+  <div>city: <input type="text" class="add-local-city" name="local_city" id="local_city" /></div>
+  <div>circumstance: <input type="text" class="add-local-circumstance" id="local_circumstance" name="local_circumstance" /></div>
+  <input type="button" class="add-local" id="add_local" name="add_local" value="add person" />
+</template>
