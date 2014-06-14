@@ -22,6 +22,7 @@ Then connect to `http://YOUR_SITE_IP:3000/` and it should work, assuming port 30
 
 ## To-Do
 
+* Run as another user besides root
 * Add files from outside instead of git clone inside Dockerfile?
 * Add accounts/login for different users
 * Check caching on git clone
