@@ -11,7 +11,7 @@ Built as a way to play with Docker and Meteor.
 
 Copy `Dockerfile` from the repo into your desired dir.
 
-    sudo docker build -no-cache -rm=true --tag="localsiknow"
+    sudo docker build -no-cache -rm=true --tag="localsiknow" ./
     sudo docker run -p 3000:3000 -d localsiknow
 
 Then connect to `http://YOUR_SITE_IP:3000/` and it should work, assuming port 3000 is available to you.
